@@ -1,0 +1,11 @@
+{
+  "name": "renovar-vidas-site",
+  "version": "1.0.0",
+  "description": "Site estático — utilitários para gerar favicons a partir do logo SVG",
+  "scripts": {
+    "build:favicons": "node tools/convert-logo.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.0"
+  }
+}
