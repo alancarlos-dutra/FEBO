@@ -16,15 +16,6 @@ Um logo SVG de exemplo foi criado em `site/assets/logo/logo.svg`. Substitua por 
  3. Coloque o logo e o favicon em `site/assets/logo/` como `logo.png` and `favicon.ico`.
  	- Um logo SVG de exemplo foi criado: `site/assets/logo/logo.svg`.
  	- Um favicon SVG de exemplo foi criado em `site/assets/logo/favicon.svg`.
-	5. Para gerar `favicon-32.png` e `favicon-16.png` a partir do SVG, rode o script abaixo (requer Node.js):
-
-	```bash
-	cd site
-	npm install
-	npm run build:favicons
-	```
-
-	Os arquivos serão criados em `site/assets/logo/`.
 4. O menu é responsivo; em telas pequenas use o botão de menu para navegar.
 
 Se quiser, eu posso ajustar cores, tipografia ou exportar para um deploy simples.
