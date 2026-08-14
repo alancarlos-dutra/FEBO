@@ -14,7 +14,6 @@
 *{box-sizing:border-box}
 body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.5;margin:0;color:var(--text);background:linear-gradient(180deg,var(--bg),#fff)}
 
-/* Animações */
 @keyframes fadeInUp{
   from{opacity:0;transform:translateY(30px)}
   to{opacity:1;transform:translateY(0)}
@@ -39,16 +38,19 @@ body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue
 .site-nav a.active{color:var(--primary)}
 .site-nav a:hover{background:rgba(178,77,0,0.06)}
 .nav-toggle{display:none;background:transparent;border:0;font-size:1.4rem;color:var(--primary);cursor:pointer}
+
 .hero{padding:4rem 0;text-align:center;background:linear-gradient(135deg,rgba(230,115,0,0.06),rgba(178,77,0,0.03));animation:fadeInUp 0.8s ease-out}
 .hero h1{font-size:1.9rem;margin:0 0 .5rem;color:var(--dark);animation:fadeInUp 0.8s ease-out 0.2s both}
 .lead{color:var(--muted);margin-bottom:1rem;animation:fadeInUp 0.8s ease-out 0.1s both}
-.btn{display:inline-block;background:var(--primary);color:var(--primary-2);padding:.7rem 1.1rem;border-radius:10px;text-decoration:none;font-weight:700;animation:fadeInUp 0.8s ease-out 0.3s both;transition:transform 0.3s ease,box-shadow 0.3s ease}
+.btn{display:inline-block;background:var(--primary);color:var(--primary-2);padding:.7rem 1.1rem;border-radius:10px;text-decoration:none;font-weight:700;animation:fadeInUp 0.8s ease-out 0.3s both;transition:transform 0.3s ease,box-shadow 0.3s ease;cursor:pointer}
 .btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(230,115,0,0.3)}
-.section{padding:3rem 0;animation:fadeInUp 0.8s ease-out}
-.section h2{margin-top:0;color:var(--sec-2);animation:fadeInUp 0.8s ease-out 0.1s both}
+
+.section{padding:3rem 0}
+.section h2{margin-top:0;color:var(--sec-2)}
 .about p{max-width:780px}
+
 .actions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(34,34,34,0.06);border-top:6px solid var(--primary);animation:fadeInScale 0.6s ease-out both;transition:transform 0.3s ease,box-shadow 0.3s ease}
+.card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(34,34,34,0.06);border-top:6px solid var(--primary);animation:fadeInScale 0.6s ease-out both;transition:transform 0.3s ease,box-shadow 0.3s ease;cursor:pointer}
 .card:nth-child(1){animation-delay:0.1s}
 .card:nth-child(2){animation-delay:0.2s}
 .card:nth-child(3){animation-delay:0.3s}
@@ -58,55 +60,19 @@ body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue
 .card:nth-child(7){animation-delay:0.7s}
 .card:hover{transform:translateY(-8px);box-shadow:0 12px 32px rgba(230,115,0,0.2)}
 .card h3{margin:.6rem 0 .4rem}
-.img-placeholder, .card img{height:160px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;object-fit:cover;width:100%}
-.img-placeholder{background:linear-gradient(135deg,var(--primary),var(--sec-1))}
-.contact-card{
-  background:var(--card);
-  border-radius:16px;
-  padding:2rem;
-  box-shadow:0 12px 32px rgba(230,115,0,0.12);
-  border-left:6px solid var(--primary);
-  max-width:700px;
-  margin-top:1.5rem;
-  animation:fadeInScale 0.8s ease-out 0.2s both
-}
-.contact-item{
-  display:flex;
-  align-items:flex-start;
-  gap:1.5rem
-}
-.contact-icon{
-  font-size:2rem;
-  min-width:50px;
-  text-align:center;
-  animation:fadeInScale 0.6s ease-out;
-  display:inline-block
-}
-.contact-content h3{
-  margin:0 0 .5rem;
-  color:var(--sec-2);
-  font-size:1.1rem
-}
-.contact-content p{
-  margin:0;
-  color:var(--text)
-}
-.contact-content a{
-  color:var(--primary);
-  text-decoration:none;
-  font-weight:600
-}
-.contact-content a:hover{
-  text-decoration:underline
-}
-.contact-divider{
-  height:1px;
-  background:rgba(0,0,0,0.08);
-  margin:1.5rem 0
-}
+.card img{height:160px;border-radius:8px;object-fit:cover;width:100%}
+
+.contact-card{background:var(--card);border-radius:16px;padding:2rem;box-shadow:0 12px 32px rgba(230,115,0,0.12);border-left:6px solid var(--primary);max-width:700px;margin-top:1.5rem;animation:fadeInScale 0.8s ease-out 0.2s both}
+.contact-item{display:flex;align-items:flex-start;gap:1.5rem}
+.contact-icon{font-size:2rem;min-width:50px;text-align:center}
+.contact-content h3{margin:0 0 .5rem;color:var(--sec-2);font-size:1.1rem}
+.contact-content p{margin:0;color:var(--text)}
+.contact-content a{color:var(--primary);text-decoration:none;font-weight:600}
+.contact-content a:hover{text-decoration:underline}
+.contact-divider{height:1px;background:rgba(0,0,0,0.08);margin:1.5rem 0}
+
 .site-footer{padding:1.2rem 0;text-align:center;color:var(--muted);border-top:1px solid rgba(0,0,0,0.04)}
 
-/* Responsive */
 @media (max-width:900px){
   .actions-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -119,5 +85,4 @@ body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue
   .logo-img{height:42px}
 }
 
-/* Utility */
 .hide{display:none}
