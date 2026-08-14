@@ -10,11 +10,27 @@ document.addEventListener('DOMContentLoaded',function(){
   // smooth scroll and close on click
   document.querySelectorAll('.nav-link').forEach(link=>{
     link.addEventListener('click',e=>{
-      e.preventDefault();
-      const id=link.getAttribute('href');
-      const el=document.querySelector(id);
-      if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
-      nav.classList.remove('open');
+      const href=link.getAttribute('href')||'';
+
+      if(href.startsWith('#')){
+        e.preventDefault();
+        const id=href;
+        const el=document.querySelector(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+        nav.classList.remove('open');
+        return;
+      }
+
+      if(href.includes('#')){
+        const [page,anchor]=href.split('#');
+        if(window.location.pathname.endsWith(page)){
+          e.preventDefault();
+          const el=document.querySelector('#'+anchor);
+          if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+          nav.classList.remove('open');
+          return;
+        }
+      }
     });
   });
 
